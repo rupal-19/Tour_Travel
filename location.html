@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>location</title>
+<style>
+body{
+
+ background-image: linear-gradient(#00f260, #0575E6);
+}
+#wss{
+	opacity:0;
+	-webkit-transittion:opacity 1.0s linear 0s;
+ 	transition:opacity 1.0s linear 0s;
+}
+
+h1{
+ font-size:70px;
+ padding:20px;
+ margin-top:50px;
+ color:white;
+ font-family:cursive;
+}
+
+
+
+table, th, td {
+  border: 1px solid black;
+  padding:10px;
+  margin:6px;
+ 
+ color:black;
+ background-color:#dcddde;
+ width:700px;
+ height:270px;
+ text-align:justify;
+}
+
+#pp{
+ text-align:center;
+ color:white;
+ font-size:35px;
+}
+
+</style>
+<script>
+var wss_i = 0;
+var wss_array =["Maldives","Bali","Hawaii","Palawan"];
+var wss_elem;
+function wssNext(){
+ wss_i++;
+ wss_elem.style.opacity=0;
+ if(wss_i > (wss_array.length -1))
+{ wss_i=0;
+}
+ setTimeout('wssSlide() ', 1000);
+}
+function wssSlide(){
+ wss_elem.innerHTML = wss_array[wss_i];
+ wss_elem.style.opacity=1;
+ setTimeout('wssNext() ', 2000);
+}
+
+
+
+
+</script>
+</head>
+<body onload="promptf()">
+<center><h1 id="wss">Maldives</h1></center>
+<script>wss_elem= document.getElementById("wss"); wssSlide(); </script>
+
+
+<p id="pp"></p>
+
+<script>
+function promptf() {
+  var person = prompt("Please enter your name");
+  if (person != null) {
+    document.getElementById("pp").innerHTML =
+    "We have some best locations for you " + person + " " +", have a look!!";
+  }
+}
+</script>
+
+
+
+<center>
+<table>
+<tr>
+<td><h3>MALDIVES</h3>
+
+Maldives is well known for its crystalline waters with beautiful shades of blue, swaying palm trees, 
+and sparkling white sand under the limitless blue skies. It is the ultimate dream of luxury and tranquility. ... With good weather throughout 
+most of the year, Maldives makes a great choice for an idyllic beach getaway.
+<br>
+</td>
+<td><h3>BALI</h3>
+
+The best time to visit Bali is between April and October, the island's dry season.
+ Bali experiences only two seasons: the rainy season and the dry season. Throughout the year, 
+the daytime temps hover between the mid-80s and low 90s,
+ with only the humidity and precipitation patterns changing.
+</td>
+</tr>
+<tr>
+<td><h3>HAWAII</h3>
+Some of the most beautiful waterfalls in the world are found in Hawaii. In fact, the Hawaiian Islands’ waterfalls are one of the
+ best reasons to visit Hawaii. With lush rainforest vegetation, waterfalls in Hawaii remind 
+us of a magical scene from Fern Gully. For the best waterfalls, make sure to include Maui on your itinerary.<br>
+</td>
+<td><h3>PALAWAN</h3>
+Come to Palawan and discover one of the most amazing natural wonder. The Underground River is a UNESCO World Heritage site and one of the New 7 Wonders of Nature. The 8.2 km river is the longest underground river in the world,
+ that winds its way underneath a mountain range, through  Underground river cave, and then goes out into the South China Sea.
+<br></td>
+</tr>
+
+</table></center><br><br><br><br><br>
+</body>
+</html>

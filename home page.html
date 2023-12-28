@@ -1,0 +1,212 @@
+<html>
+<head>
+<title>home page</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".js").click(function(){
+    $(".js").animate({right: '400px'}, 6000);
+  });
+});
+
+
+
+
+
+
+</script>
+<style>
+.js{
+
+position:relative;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif;
+}
+
+h2{
+font-size:50px;
+margin-top:120px;
+}
+
+.banner{
+ width:100%;
+ height:100vh;
+ background-image: url("bg.jpg");
+ background-size:cover;
+ background-position:center;
+ background-repeat: no-repeat;
+ opacity:.9;
+
+}
+.navbar{
+ width:85%;
+ margin:auto;
+ padding:35px 0;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+
+
+}
+.logo{
+ width :200px;
+ cursor:pointer;
+
+ margin-left: 150px;
+    margin-top:45px;
+ 
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top:20px;
+}
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    
+}
+
+
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 6px 0;
+    color:white;
+     font-weight:900;
+    text-decoration: none;
+   
+    
+   
+}
+
+
+.main-nav li a:hover,
+.main-nav li a:active {
+border-bottom: 2px solid white;
+
+}
+.content{
+ width:100%;
+ postion:absolute;
+ top:50%;
+ transform: translateY(-50%);
+ text-align:center;
+ color:white;
+}
+.content h1{
+ font-size:50px;
+ margin-top:130px;
+
+}
+.content p{
+ margin:20px auto;
+ font-weight:100;
+ line-height:25px;
+}
+
+/*---------BUTTONS---------*/
+
+ .btn{
+            margin-left: 20px;
+            margin-top: 40px;
+        }
+.btn:link,
+.btn:visited{
+    
+    display: inline-block;
+    padding:10px 30px;
+    text-decoration: none;
+    font-weight: 300;
+    border-radius: 200px;
+    transition: background-color 0.2s , color 0.2s, border 0.2s;
+    
+
+}
+.btn-full:link,
+.btn-full:visited{
+    background-color: #bf6ec6;
+    border:3px solid #461272;
+    color: #0f0d0d;
+    margin-right: 10px;
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    border:3px solid white;
+    color:white;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: #461272;
+}
+.btn-full:hover,
+.btn-full:active{
+     border:3px solid #461272;
+    color: #fff;
+}
+.btn-ghost:hover,
+.btn-ghost:active{
+    color:#fffefe;
+    border:3px solid  #461272;
+}
+  
+
+
+
+
+
+
+
+
+</style>      
+</style>
+</head>
+<body onload="typeWriter()">
+<div class="banner">
+<div class="navbar">
+<div class="js">
+<img src="logoxx.gif" alt="image" class="logo">
+</div>
+<ul class="main-nav">
+<li><a href="location.html">LOCATIONS</a></li>
+<li><a href="Budget.html">BUDGET</a></li>
+<li><a href="more.html">MORE</a></li>
+<li><a href="about.html">ABOUT US</a></li>
+<li><a href="thanks.html">THANK YOU</a></li>
+</ul>
+</div>
+<div class="content">
+
+<h2 id="demo"></h2>
+
+<script>
+var i = 0;
+var txt = 'Let us Travel together .';
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+<br><br><br>
+<div>
+             <a class="btn btn-full" href="#">Show me more </a>
+             <a class="btn btn-ghost" href="travel now.html">TRAVEL NOW</a>
+
+
+
+        </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>more</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+background-image: linear-gradient(to right,#22c1c3,#fdbb2d);
+
+padding:6%;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+img{
+	max-width: 100%;
+}
+.container{
+	padding: 30px 0;
+}
+figure{
+	max-width: 800px;
+	margin: 0 auto 40px;
+	border:2px solid #fff;
+}
+figure img{
+	max-width: 100%;
+	min-width: 100%;
+	display: block;
+}
+ol{
+	list-style: none;
+	margin: 0;
+	text-align: center;
+}
+ol li{
+	margin: 0 5px;
+	display: inline-block;
+	width: 100px;
+	border:1px solid #fff;
+	cursor: pointer;
+}
+ol li img{
+	display: block;
+
+}
+
+
+
+
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#demo{
+font-size:45px;
+text-align:center;
+color:white;
+}
+
+</style>
+</head>
+<body onload="typeWriter()">
+
+<center><h1  id="demo"></h1></center>
+
+<script>
+var i = 0;
+var txt = 'Choose the best destination to Travel';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+
+
+
+
+
+
+<div class="container">
+	<figure>
+		<img id="mainImg" src="pic1.jpg">
+	</figure>
+
+	<ol>
+		<li><img id="thumb1" src="pic1.jpg"></li>
+		<li><img id="thumb2" src="pic2.jpg"></li>
+		<li><img id="thumb3" src="pic3.jpg"></li>
+		<li><img id="thumb4" src="pic4.jpg"></li>
+	</ol>
+
+</div>
+
+
+
+
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for islands.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="#">Bhamas</a></li>
+  <li><a href="#">Bali</a></li>
+
+  <li><a href="#">Fiji</a></li>
+  <li><a href="#">Hawaii</a></li>
+
+  <li><a href="#">Maldives</a></li>
+  <li><a href="#">Maui</a></li>
+  <li><a href="#">Palawan</a></li>
+</ul>
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+
+
+var thumb1 =  document.getElementById("thumb1");
+var thumb1Src =  document.getElementById("thumb1").src;
+var thumb2 =  document.getElementById("thumb2");
+var thumb2Src =  document.getElementById("thumb2").src;
+var thumb3 =  document.getElementById("thumb3");
+var thumb3Src =  document.getElementById("thumb3").src;
+var thumb4 =  document.getElementById("thumb4");
+var thumb4Src =  document.getElementById("thumb4").src;
+
+thumb1.addEventListener("click",function(){
+	document.getElementById("mainImg").src = thumb1Src
+})
+thumb2.addEventListener("click",function(){
+	document.getElementById("mainImg").src = thumb2Src
+})
+thumb3.addEventListener("click",function(){
+	document.getElementById("mainImg").src = thumb3Src
+})
+thumb4.addEventListener("click",function(){
+	document.getElementById("mainImg").src = thumb4Src
+})
+
+
+
+
+
+</script>
+</body>
+</html>

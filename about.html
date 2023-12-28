@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>About Us</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+
+
+function slideDown(el) {
+  var elem = document.getElementById(el);
+  elem.style.transition = "all 2s ease-in-out";
+  elem.style.height = "520px";
+}
+
+
+</script>
+<style>
+
+body{
+  background-image: linear-gradient(to right,#FEAC5E,#C779D0,#4BC0C8);
+
+}
+
+#box{
+  width:600px;
+  height:50px;
+  background-image: linear-gradient(to right,#f953c6,#b91d73);
+  margin:0 auto;
+  color:white;
+  margin-top:1%;
+  overflow:hidden;
+ box-shadow: 10px 10px 5px grey;
+ font-size:20px;
+}
+
+.pp{
+padding:25px;
+text-align:justify;
+line-height:1.6;
+}
+
+
+.ml16 {
+  color:white;
+  padding: 40px 0;
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  overflow: hidden;
+ text-align:center;
+}
+
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+</style>
+
+</head>
+<body onload="slideDown('box');">
+
+<h1 class="ml16">Let's travel together</h1>
+<script>
+
+var textWrapper = document.querySelector('.ml16');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml16 .letter',
+    translateY: [-100,0],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 30 * i
+  }).add({
+    targets: '.ml16',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+</script>
+
+<div id = "box"><h2><center>ABOUT US</center></h2>
+<p class="pp">We are very excited to introduce our agency as the one stop provider for all your travel needs and requirements. We label ourselves as leading, innovative, and highly efficient and look forward to demonstrate these qualities at the earliest possible chance.
+
+Since established in 2018, the primary aim was to provide quality travel services to business and leisure travellers. The agency continued to grow and branch out its interests to rise as one of the exponents in the travel industry.
+
+Supported by strong financial management, impressive customer satisfaction and constant improvement, our agency as expanded to cover various facets of the industry. Our experience led to perfection in both our outbound and inbound units.</div>
+
+</p>
+
+
+
+</body>
+</html>
